@@ -24,7 +24,7 @@ router.post("", async (req, res) => {
   try {
     const user = await User.create(req.body);
     transporter.sendMail({
-      from: '"hashtech" <hashmatwani@hashtech.com>', // sender address
+      
       to: user.email, // list of receivers
       subject: `Welcome to hashtech system ${user.first_name} ${user.last_name}`, // Subject line
       text: `Hi ${user.first_name}, Please confirm your email address`, // plain text body
